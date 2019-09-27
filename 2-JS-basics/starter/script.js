@@ -118,6 +118,7 @@ console.log(x);
 /**
  * Coding Challenge 1
  */
+/*
 var weightMark, weightJohn, heightMark, heightJohn, bmiMark, bmiJohn, higherBMI;
 
 weightMark = 300;
@@ -133,4 +134,21 @@ console.log(bmiJohn);
 higherBMI = bmiMark > bmiJohn;
 
 console.log('Is Mark\'s BMI higher than John\'s? ' + higherBMI);
+*/
 
+/**
+ * Instructor solution
+ */
+
+ var massMark = 78; // kg
+ var heightMark = 1.69; // meters
+
+ var massJohn = 92;
+ var heightJohn = 1.95;
+
+ var BMIMark = massMark / (heightMark * heightMark);
+ var BMIJohn = massJohn / (heightJohn * heightJohn);
+
+ var markHigherBMI = BMIMark > BMIJohn;
+
+console.log('Is Mark\'s BMI higher than John\'s? ' + markHigherBMI);
