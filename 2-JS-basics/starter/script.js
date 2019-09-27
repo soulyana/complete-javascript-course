@@ -299,6 +299,7 @@ switch (true) {
 /**
  * Coding Challenge 2
  */
+/*
 
 // var johnTeam = 89 + 120 + 103;
 // var mikeTeam = 89 + 120 + 13;
@@ -329,3 +330,32 @@ switch (true) {
     default:
         console.log('Draw!')
 }
+*/
+
+/**
+ * Functions
+ */
+function calculateAge(birthYear) {
+    return 2018 - birthYear;
+}
+
+var ageSoul = calculateAge(1988);
+var ageMike = calculateAge(1948);
+var ageJane = calculateAge(1969);
+console.log(ageSoul, ageMike, ageJane);
+
+function yearsUntilRetirement(birthYear, firstName) {
+    var age = calculateAge(birthYear);
+    var retirement = 65 - age;
+
+    if (retirement > 0 ) {
+        console.log(firstName + ' retires in ' + retirement + ' years.');
+    } else {
+        console.log(firstName + ' is already retired');
+    }
+    
+}
+
+var soulRetirement = yearsUntilRetirement(1988, 'Soul');
+var mikeRetirement = yearsUntilRetirement(1948, 'Mike');
+console.log(soulRetirement, mikeRetirement);
