@@ -389,10 +389,10 @@ console.log(soulRetirement, mikeRetirement);
  console.log(whatDoYouDo('surfer', 'Mack'));
  */
 
- /**
-  * Arrays
-  */
-
+/**
+ * Arrays
+ */
+/*
   // initialize new array
  var names = ['John', 'Soul', 'Mark', 'Jane'];
  var years = new Array(1990, 1969, 19488, 1988);
@@ -428,3 +428,65 @@ console.log(soulRetirement, mikeRetirement);
 
  var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John is a designer!'
  console.log(isDesigner);
+ */
+
+/**
+ * Coding Challenge 3
+ */
+
+var tips = [];
+var bills = [];
+
+// var tipCalculator = function (bill) {
+//     var tip;
+//     switch (bill) {
+//         case bill < 50:
+//             console.log(bill + ' 20%');
+//             tip = bill * (20 / 100);
+//             return tips.push(tip);
+//         case bill >= 50 && bill <= 200:
+//             console.log(bill + ' 15%');
+//             tip = bill * (15 / 100);
+//             return tips.push(tip);
+
+//         case bill > 100:
+//             console.log(bill + ' 10%');
+//             tip = bill * (10 / 100);
+//             return tips.push(tip);
+//         default:
+//             console.log(bill + ' 0%');
+//             tip = bill * (0);
+//             return tips.push(tip);
+//     }
+// }
+
+// console.log(tipCalculator(124));
+// console.log(tipCalculator(48));
+// console.log(tips);
+
+function tipCalculator(bill) {
+    var tipPercent;
+    var total;
+    if (bill < 50) {
+        tipPercent = bill * .20;
+        total = bill + tipPercent;
+        console.log(tipPercent, total);
+        return tips.push(tipPercent) && bills.push(total);
+    } else if (bill > 50 && bill < 200) {
+        tipPercent = bill * .15;
+        total = bill + tipPercent;
+        console.log(tipPercent, total);
+        return tips.push(tipPercent) && bills.push(total);
+    } else {
+        tipPercent = bill * .10;
+        total = bill + tipPercent;
+        console.log(tipPercent, total);
+        return tips.push(tipPercent) && bills.push(total);
+    }
+}
+
+var twentyTip = tipCalculator(48);
+var fiftenTip = tipCalculator(148);
+var tenTip = tipCalculator(250);
+console.log(tips);
+console.log(bills);
