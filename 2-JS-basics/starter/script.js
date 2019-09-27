@@ -270,6 +270,7 @@ switch (true) {
 /**
  * Truthy and Falsy Values and quality operators
  */
+/*
 
  // falsy values: undefined, null, 0, '', NaN
  // truthy values: NOT falsy values
@@ -292,4 +293,39 @@ switch (true) {
  }
  console.log(23 == '23');
  console.log(23 === '23'); // best practice to always use
- 
+*/
+
+
+/**
+ * Coding Challenge 2
+ */
+
+// var johnTeam = 89 + 120 + 103;
+// var mikeTeam = 89 + 120 + 13;
+// var maryTeam = 97 + 134 + 105;
+
+var johnTeam = 89 + 120 + 129;
+var mikeTeam = 89 + 120 + 149;
+var maryTeam = 89 + 120 + 169;
+
+avgJohn = johnTeam / 3; // 104
+avgMike = mikeTeam / 3; // 74
+avgMary = maryTeam / 3; // 112
+
+console.log(avgJohn, avgMike, avgMary);
+
+var winner = avgJohn > avgMike ? console.log('John\'s Team wins in average with an average score of ' + avgJohn) : console.log('Mike\'s Team wins in average with an average score of ' + avgMike);
+
+switch (true) {
+    case avgJohn > avgMike && avgJohn > avgMary:
+        console.log('John\'s Team wins in average with an average score of ' + avgJohn);
+        break;
+    case avgMary > avgJohn && avgMary > avgMike:
+        console.log('Mary\'s Team wins in average with an average score of ' + avgMary);
+        break;
+    case avgMike > avgJohn && avgMike > avgMary:
+        console.log('Mike\'s Team wins in average with an average score of ' + avgMike);
+        break;
+    default:
+        console.log('Draw!')
+}
