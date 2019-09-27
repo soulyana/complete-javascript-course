@@ -365,6 +365,7 @@ console.log(soulRetirement, mikeRetirement);
 /**
  * Function Statements and Expressions
  */
+/*
 
  // Function declaration
 //  function whatDoYouDo(job, firstName) {}
@@ -386,3 +387,44 @@ console.log(soulRetirement, mikeRetirement);
  console.log(whatDoYouDo('teacher', 'John'));
  console.log(whatDoYouDo('designer', 'Fana'));
  console.log(whatDoYouDo('surfer', 'Mack'));
+ */
+
+ /**
+  * Arrays
+  */
+
+  // initialize new array
+ var names = ['John', 'Soul', 'Mark', 'Jane'];
+ var years = new Array(1990, 1969, 19488, 1988);
+
+ console.log(names);
+ console.log(names[1]);
+ console.log(names.length);
+
+ // Mutate array data
+ names[3] = 'Ben';
+ console.log(names);
+
+ names[names.length] = 'Mary';
+ console.log(names);
+
+ // Different data types
+ var john = ['John', 'Smith', 1990, 'designer', false];
+
+ // add elements to an array
+ john.push('blue');
+ john.unshift('Mr.');
+ console.log(john);
+
+ // remove elements from an array
+ john.pop();
+ john.pop();
+ john.shift();
+ console.log(john);
+
+ // position in array
+ console.log(john.indexOf(1990)); // 2
+ console.log(john.indexOf(23)); // -1 element not in array
+
+ var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John is a designer!'
+ console.log(isDesigner);
