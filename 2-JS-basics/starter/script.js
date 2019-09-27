@@ -219,7 +219,7 @@ if (BMIMark > BMIJohn) {
 /**
  * The Ternary oprator and switch statements
  */
-
+/*
 var firstName = 'John';
 var age = 34;
 
@@ -265,3 +265,31 @@ switch (true) {
     default:
         console.log(firstName + ' is an old man.');
 }
+*/
+
+/**
+ * Truthy and Falsy Values and quality operators
+ */
+
+ // falsy values: undefined, null, 0, '', NaN
+ // truthy values: NOT falsy values
+
+ var height;
+ height = '23';
+
+ if (height || height === 0 ) {
+     console.log('Variable is defined');
+ } else {
+     console.log('Variable is declared but not defined');
+ }
+
+ // === strict equality compariosons
+ // == type coercison 
+
+ // Equality operators
+ if (height == '23') {
+     console.log('The == operator does type coercion!');
+ }
+ console.log(23 == '23');
+ console.log(23 === '23'); // best practice to always use
+ 
